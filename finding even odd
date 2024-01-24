@@ -1,0 +1,8 @@
+a<- readline(prompt="enter the value of a")
+enter the value of a103
+> a<-as.integer(a)
+> if(a%%2==1){
++ print(paste("NUMBER IS ODD"))
++ }else{
++ print(paste("NUMBER IS EVEN"))
++ }
