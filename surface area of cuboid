@@ -1,0 +1,8 @@
+calculate_cuboid_area <- function(length, width, height) {
+  2 * (length * width + width * height + height * length)
+}
+length <- 5
+width <- 4
+height <- 3
+area <- calculate_cuboid_area(length, width, height)
+print(paste("The surface area of the cuboid with length", length, ", width", width, ", and height", height,"is", area))
