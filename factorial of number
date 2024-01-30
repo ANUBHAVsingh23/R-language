@@ -1,0 +1,4 @@
+
+number <- 5
+ factorial_of_number <- factorial(number)
+ print(factorial_of_number)
