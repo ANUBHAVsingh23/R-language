@@ -1,0 +1,8 @@
+calculate_rectangle_area <- function(length, width) {
+  length * width
+}
+length <- 6
+width <- 4
+
+area <- calculate_rectangle_area(length, width)
+print(paste("The area of the rectangle with length", length, "and width", width, "is", area))
