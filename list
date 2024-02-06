@@ -1,0 +1,5 @@
+empId = c(1, 2, 3, 4)
+empName = c("Debi", "Sandeep", "Subham", "Shiba")
+ numberOfEmp = 4
+ empList = list(empId, empName, numberOfEmp)
+ print(empList)
