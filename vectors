@@ -1,0 +1,7 @@
+# R program to illustrate Vector
+ 
+# Vectors(ordered collection of same data type)
+X = c(1, 3, 5, 7, 8)
+ 
+# Printing those elements in console
+print(X)
