@@ -1,0 +1,15 @@
+# Load ggplot2
+> library(ggplot2)
+> 
+> # Assuming your dataset is already loaded and named "housing"
+> 
+> # Create a bar graph
+> ggplot() +
++     geom_bar(data = Housing, aes_string(x = "furnishingstatus", y = "price"), stat = "identity", fill = "blue") +
++     labs(x = "furnishingstatus", y = "Price") +
++     ggtitle("Bar Graph of Price by Area")
+> ggplot(Housing, aes(x = furnishingstatus, y = price, fill = furnishingstatus)) +
++     geom_bar(stat = "identity") +
++     scale_fill_manual(values = c("furnished" = "green", "semi-furnished" = "orange", "unfurnished" = "blue")) +
++     labs(x = "Furnishing Status", y = "Price") +
++     ggtitle("Bar Graph of Price by Furnishing Status")
