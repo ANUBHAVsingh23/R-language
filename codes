@@ -1,0 +1,121 @@
+Hello World
+5+5
+10-5
+5*5
+10/2
+print("Hello World!")
+for (x in 1:10) {
+  print(x)
+}
+# This is a comment
+"Hello World!"
+
+#creating variables 
+name <- "John"
+age <- 40
+
+name <- "Anubhav Singh"
+
+name 
+name <- "Anubhav Singh"
+
+print(name)
+
+#concatenate Elements
+#To combine both text and a variable, R uses comma (,):
+text <- "awesome"
+
+paste("R is", text)
+
+
+text1 <- "Anubhav is"
+text2 <- "awesome"
+
+paste(text1, text2)
+
+
+# numeric
+x <- 10.5
+class(x)
+
+# integer
+x <- 1000L
+class(x)
+
+# complex
+x <- 9i + 3
+class(x)
+
+# character/string
+x <- "R is exciting"
+class(x)
+
+# logical/boolean
+x <- TRUE
+class(x)
+
+#To create an integer variable, you must use the letter L after the integer value:
+
+x <- 1000L
+y <- 55L
+
+# Print values of x and y
+x
+y
+
+# Print the class name of x and y
+class(x)
+class(y)
+
+x <- 1L # integer
+y <- 2 # numeric
+
+# convert from integer to numeric:
+a <- as.numeric(x)
+
+# convert from numeric to integer:
+b <- as.integer(y)
+
+# print values of x and y
+x
+y
+
+# print the class name of a and b
+class(a)
+class(b)
+
+
+max(5, 10, 15)
+
+min(5, 10, 15)
+
+sqrt(16)
+
+abs(-4.7)
+
+ceiling(1.4)
+
+floor(1.4)
+
+str <- "Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."
+
+cat(str)
+
+#find the number of character in a string 
+str <- "Hello World!"
+
+nchar(str)
+
+# check if a character or a sequence of characters are present in a string:
+str <- "Hello World!"
+
+grepl("H", str)
+grepl("Hello", str)
+grepl("X", str)
+
+10 > 9    # TRUE because 10 is greater than 9
+10 == 9   # FALSE because 10 is not equal to 9
+10 < 9    # FALSE because 10 is greater than 9
