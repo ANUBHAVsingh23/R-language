@@ -1,0 +1,89 @@
+# 1.Add two vectors of integers type and length 3
+# Create two vectors
+vector1 <- c(1, 2, 3)
+vector2 <- c(4, 5, 6)
+result <- vector1 + vector2
+print(result)
+
+# 2.Append value to a given empty vector:
+# Create an empty vector
+empty_vector <- c()
+
+# Append a value
+empty_vector <- c(empty_vector, 7)
+print(empty_vector)
+
+# 3.Multiply two vectors of integers type and length 3:
+# Create two vectors
+vector1 <- c(1, 2, 3)
+vector2 <- c(4, 5, 6)
+result <- vector1 * vector2
+print(result)
+
+
+# 4.Find Sum, Mean, and Product of a Vector:
+# Create a vector
+vector <- c(1, 2, 3, 4, 5)
+# Calculate sum, mean, and product
+sum_vector <- sum(vector)
+mean_vector <- mean(vector)
+prod_vector <- prod(vector)
+
+# Print results
+print(sum_vector)
+print(mean_vector)
+print(prod_vector)
+
+# 5.Find the minimum and maximum of a Vector:
+# Create a vector
+vector <- c(1, 2, 3, 4, 5)
+min_vector <- min(vector)
+max_vector <- max(vector)
+
+# Print results
+print(min_vector)
+print(max_vector)
+
+
+# 6.Sort Vector in ascending or descending order:
+# Create a vector
+vector <- c(5, 3, 1, 4, 2)
+
+# Sort in ascending order
+sorted_asc <- sort(vector)
+
+# Sort in descending order
+sorted_desc <- sort(vector, decreasing = TRUE)
+
+# Print results
+print(sorted_asc)
+print(sorted_desc)
+
+#Reverse order of a given Vector:
+# Create a vector
+vector <- c(1, 2, 3, 4, 5)
+
+# Reverse the vector
+reversed_vector <- rev(vector)
+
+# Print result
+print(reversed_vector)
+
+
+#Concatenate a Vector:
+# Create two vectors
+vector1 <- c(1, 2, 3)
+vector2 <- c(4, 5, 6)
+
+# Concatenate the vectors
+concatenated_vector <- c(vector1, vector2)
+
+# Print result
+print(concatenated_vector)
+
+
+
+
+
+
+
