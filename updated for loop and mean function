@@ -1,0 +1,28 @@
+n <- 5
+for (i in 1:n) {
+  print(rep("#", i))
+}
+
+n <- 5
+for (i in 1:n) {
+  for (j in 1:i) {
+    cat("#")
+  }
+  cat("\n")
+}
+
+c <- c(7,3,6,8,5,9)
+f <- c(2,1,4,5,6,5)
+m <- sum(c*f)
+print(m)
+mean1 <- m/(sum(f))
+print(mean1)
+
+
+lb <- c(10, 20, 30, 40, 50, 60)
+ub <- c(20, 30, 40, 50, 60, 70)
+f <- c(2, 1, 4, 5, 6, 5)
+mid <- (lb+ub)/2
+result_mean<-sum(mid*f)/sum(f)
+print(result_mean)
+
