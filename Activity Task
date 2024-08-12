@@ -1,0 +1,21 @@
+# Today Activity 12 August 2024
+#create a data frame named employee data with column:Name, Age, department, and salary
+#Add data for five employee
+#Calculate the average salary of the employees.
+#Extract the details of employees who belongs to the"IT"department
+#increase the salary of all the employees in the "HR" department by 10%
+
+
+employees <- data.frame(
+  Name = c("Harsh", "Anubhav", "Ashish", "Manish", "Akash"),
+  Age = c(28, 35, 30, 45, 40),
+  Department = c("HR", "HR", "Finance", "IT", "IT"),
+  Salary = c(50000, 60000, 45000, 55000, 62000)
+)
+#print HR details
+it_employees <- employees[employees$Department == "IT", ]
+print(it_employees)
+#print IT details
+hr_employees <- employees[employees$Department == "HR", ]
+hr_employees$Salary <- hr_employees$Salary * 1.10
+print(hr_employees)
