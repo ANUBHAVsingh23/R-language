@@ -1,0 +1,172 @@
+#Employee Data Management
+#Scenario: You are the HR manager of a company. You need to manage
+#employee data using R. The data includes employee names, ages,
+#departments, and salaries.
+#Tasks1
+ # 1. Create a data frame named employee_data with columns: Name, Age,
+#Department, and Salary.
+#2. Add data for five employees.
+#3. Calculate the average salary of the employees.
+#4. Extract the details of employees who belong to the "IT"
+#department.
+#5. Increase the salary of all employees in the "HR" department by
+#10%.
+#Student Grades Analysis
+#Scenario: As a teacher, you have a dataset of student
+#grades. You need to analyze the data to identify top
+#performers and calculate the overall class average.
+#Tasks:2
+ # 1.Create a data frame named student_grades with
+#columns: StudentName, Math, Science, English.
+#2. Add data for six students.
+#3.Calculate the average grade for each student and add
+#it as a new column.
+#4.Identify students with an average grade above 85.
+#5. Find the overall class average for each subject.
+#Sales Data Analysis
+#Scenario: You are given a dataset containing monthly sales figures for a
+#retail store. Your task is to analyze the sales data to identify trends and
+#summarize key metrics.
+#Tasks:3
+ # 1. Create a data frame named sales_data with columns: Month,
+#ProductA, ProductB, ProductC.
+#2. Add data for six months.
+#3. Calculate the total sales for each product over the six months.
+#4. Identify the month with the highest total sales.
+#5. Calculate the average monthly sales for each product.
+#Customer Purchase Data
+#Scenario: You manage customer purchase data for an e-commerce
+#company. You need to manipulate this data by adding new columns and
+#removing unnecessary ones.
+#Tasks:4
+ # 1. Create a data frame named customer_data with columns:
+  #CustomerID, Product, Quantity, and Price.
+#2. Add data for five customers.
+#3. Add a new column TotalCost that is the product of Quantity and
+#Price.
+#4. Add another column Discount that applies a 10% discount on
+#TotalCost if the Quantity is greater than 5.
+#5. Remove the Price column from the data frame as it is no longer
+#needed.
+#Salesperson Performance
+#Scenario: You have a dataset of salespersons and their sales figures.
+#You need to update the data by adding and deleting columns based on
+#performance metrics.
+#Tasks:5
+ # 1. Create a data frame named salesperson_data with columns:
+#  Salesperson, Region, SalesQ1, SalesQ2, and SalesQ3.
+#2. Add data for five salespersons.
+#3. Add a new column TotalSales that sums up SalesQ1, SalesQ2, and
+#SalesQ3.
+#4. Delete the SalesQ1 and SalesQ3 columns from the data frame to
+#focus only on SalesQ2 and TotalSales.
+#5. Add a new column Bonus where salespersons get a $500 bonus if
+#their TotalSales exceeds $50,000.
+
+#task1
+# Create a data frame named employee_data
+employee_data <- data.frame(
+  Name = c("Anubhav", "Anuj", "Charu", "Harsh", "Akash"),
+  Age = c(30, 25, 35, 40, 28),
+  Department = c("HR", "IT", "Marketing", "HR", "IT"),
+  Salary = c(50000, 60000, 45000, 55000, 70000)
+)
+
+# Calculate the average salary
+average_salary <- mean(employee_data$Salary)
+cat("Average Salary:", average_salary, "\n")
+
+# Extract details of employees in the "IT" department
+it_employees <- employee_data[employee_data$Department == "IT", ]
+print(it_employees)
+
+# Increase salary of employees in the "HR" department by 10%
+employee_data$Salary[employee_data$Department == "HR"] <- employee_data$Salary[employee_data$Department == "HR"] * 1.1
+print(employee_data)
+
+
+
+
+#task2
+# Create a data frame named student_grades
+student_grades <- data.frame(
+  StudentName = c("Anubhav", "Anuj", "Charu", "Harsh", "Akash"),
+  Math = c(85, 90, 75, 88, 92, 78),
+  Science = c(92, 85, 88, 75, 90, 82),
+  English = c(88, 75, 90, 92, 85, 80)
+)
+
+# Calculate the average grade for each student
+student_grades$Average <- rowMeans(student_grades[, 2:4])
+
+# Identify students with an average grade above 85
+top_students <- student_grades[student_grades$Average > 85, ]
+print(top_students)
+
+# Find the overall class average for each subject
+class_average <- colMeans(student_grades[, 2:4])
+cat("Class Average:\n")
+print(class_average)
+
+
+#task3
+# Create a data frame named sales_data
+sales_data <- data.frame(
+  Month = c("Jan", "Feb", "Mar", "Apr", "May", "Jun"),
+  ProductA = c(1000, 1200, 800, 1500, 1300, 1100),
+  ProductB = c(800, 1000, 1200, 900, 1100, 1300),
+  ProductC = c(1200, 800, 1000, 1100, 1300, 900)
+)
+
+# Calculate the total sales for each product
+total_sales <- colSums(sales_data[, 2:4])
+cat("Total Sales:\n")
+print(total_sales)
+
+# Identify the month with the highest total sales
+highest_sales_month <- sales_data[which.max(rowSums(sales_data[, 2:4])), ]
+print(highest_sales_month)
+
+# Calculate the average monthly sales for each product
+average_monthly_sales <- colMeans(sales_data[, 2:4])
+cat("Average Monthly Sales:\n")
+print(average_monthly_sales)
+
+#task4
+# Create a data frame named customer_data
+customer_data <- data.frame(
+  CustomerID = c(101, 102, 103, 104, 105),
+  Product = c("A", "B", "C", "A", "B"),
+  Quantity = c(3, 5, 2, 4, 6),
+  Price = c(20, 30, 40, 20, 30)
+)
+
+# Add a new column TotalCost
+customer_data$TotalCost <- customer_data$Quantity * customer_data$Price
+
+# Add another column Discount
+customer_data$Discount <- ifelse(customer_data$Quantity > 5, customer_data$TotalCost * 0.1, 0)
+
+# Remove the Price column
+customer_data <- customer_data[, -4]
+
+
+#task5
+# Create a data frame named salesperson_data
+salesperson_data <- data.frame(
+  Salesperson = c("Anubhav", "Anuj", "Charu", "Harsh", "Akash"),
+  Region = c("North", "South", "East", "West", "North"),
+  SalesQ1 = c(10000, 12000, 8000, 15000, 13000),
+  SalesQ2 = c(12000, 10000, 15000, 9000, 11000),
+  SalesQ3 = c(8000, 15000, 12000, 11000, 13000)
+)
+
+# Add a new column TotalSales
+salesperson_data$TotalSales <- rowSums(salesperson_data[, 3:5])
+
+# Delete the SalesQ1 and SalesQ3 columns
+salesperson_data <- salesperson_data[, -c(3, 5)]
+
+# Add a new column Bonus
+salesperson_data$Bonus <- ifelse(salesperson_data$TotalSales > 50000, 500, 0)
+
